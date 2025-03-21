@@ -36,7 +36,7 @@ sudo nano /etc/hosts
 ```
 # Dodanie linii:
 ```bash
-# 127.0.0.1 myregistry.domain.com
+127.0.0.1 myregistry.domain.com
 ```
 # 6. Dodanie certyfikatu do lokalnych certyfikatów
 ```bash
