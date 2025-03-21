@@ -1,5 +1,7 @@
 # PAwChO-lab3
-Pliki załączone do sprawozdania nr 3
+Pliki załączone do sprawozdania nr 3\
+Link do obrazu w dockerhub: https://hub.docker.com/repository/docker/extremical/lab3/general
+
 # Proces utworzenia obrazu na systemie Linux
 
 
@@ -48,7 +50,19 @@ sudo update-ca-certificates
 ```
 # 8. Sprawdzenie katalogu repozytoriów
 ```bash
+curl -X GET http://myregistry.domain.com/v2/_catalog
+```
+zwróci
+```bash
+Client sent an HTTP request to an HTTPS server.
+```
+Natomiast polecenie
+```bash
 curl -X GET https://myregistry.domain.com/v2/_catalog
+```
+powinno zwracać spis repozytoriów. Na przykład:
+```bash
+{"repositories":["my-ubuntu"]}
 ```
 # 9. Otagowanie i przesłanie obrazu do registry
 ```bash
